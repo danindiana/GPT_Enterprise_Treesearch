@@ -1,0 +1,5 @@
+This version of the code implements a 'divide and conquer' algorithm for the search. 
+
+Applying divide-and-conquer strategy to your existing code, the main point of divergence would be in the recursive function DLS(). This function would be modified to concurrently search through directories rather than sequentially. To achieve this, we would need to leverage multi-threading, which can be done using C++11's <thread> standard library.
+
+Please note that multi-threading can provide a significant performance improvement if there are a large number of subdirectories to search through, but it also introduces additional complexity and can actually hurt performance if the number of subdirectories is small due to the overhead of creating and managing threads.
