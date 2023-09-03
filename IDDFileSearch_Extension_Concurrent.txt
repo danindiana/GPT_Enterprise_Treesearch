@@ -1,3 +1,36 @@
+Example usage:
+
+  924  ./IDDFileSearch_Extension 
+  925  ./IDDFileSearch_Extension *.pdf /dev/sdb 3
+  926  sudo ./IDDFileSearch_Extension *.pdf /dev/sdb 3
+  927  sudo apt-get install g++ libstdc++-10-dev
+  928  sudo ./IDDFileSearch_Extension *.pdf /dev/sdb 3
+  929  ./robustDiskSelectSearch.sh 
+  930  ls
+  931  sudo chmod +x IDDFileSearch_Extension
+  932  ./robustDiskSelectSearch.sh 
+  933  ./IDDFileSearch_Extension *.pdf /dev/sdb 3
+  934  lsblk
+  935  ./IDDFileSearch_Extension *.pdf /media/walter/7514e32b-65c9-4a64-a233-5db2311455f4 3
+  936  sudo ./IDDFileSearch_Extension *.pdf /media/walter/7514e32b-65c9-4a64-a233-5db2311455f4 3
+  937  ls
+  938  sudo ./IDDFileSearch_Extension *.pdf /media/walter/7514e32b-65c9-4a64-a233-5db2311455f4/files/ 3
+  939  ls
+  940  sudo ./IDDFileSearch_Extension .pdf /media/walter/7514e32b-65c9-4a64-a233-5db2311455f4/files/ 3
+  941  sudo ./IDDFileSearch_Extension .txt /media/walter/7514e32b-65c9-4a64-a233-5db2311455f4/files/ 3
+  942  sudo ./IDDFileSearch_Extension .pdf /media/walter/7514e32b-65c9-4a64-a233-5db2311455f4/files/ 3
+  943  lsblk
+  944  sudo ./IDDFileSearch_Extension .pdf /media/walter/462C364D2C3637EF/ 3
+  945  sudo ./IDDFileSearch_Extension .pdf /media/walter/462C364D2C3637EF/ 4
+  946  sudo ./IDDFileSearch_Extension .pdf /media/walter/462C364D2C3637EF/ 5
+  947  sudo ./IDDFileSearch_Extension .pdf /media/walter/462C364D2C3637EF/ 6
+  948  sudo ./IDDFileSearch_Extension .jpg /media/walter/462C364D2C3637EF/ 6
+  949  sudo ./IDDFileSearch_Extension .jpg /media/walter/462C364D2C3637EF/ 8
+  950  sudo ./IDDFileSearch_Extension .jpg /media/walter/462C364D2C3637EF/ 12
+  951  history 
+
+
+
 This version of the code implements a 'divide and conquer' algorithm for the search. 
 
 Applying divide-and-conquer strategy to your existing code, the main point of divergence would be in the recursive function DLS(). This function would be modified to concurrently search through directories rather than sequentially. To achieve this, we would need to leverage multi-threading, which can be done using C++11's <thread> standard library.
